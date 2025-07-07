@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head><title>Recommendations</title></head>
+<body>
+    {% if error %}
+        <p style="color:red;">{{ error }}</p>
+    {% else %}
+        <h2>Recommended Products:</h2>
+        <ul>
+        {% for product_id, category in recommendations %}
+            <li><strong>{{ category }}</strong> (Product ID: {{ product_id }})</li>
+        {% endfor %}
+        </ul>
+    {% endif %}
+    <a href="/">Back</a>
+</body>
+</html>
